@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #001a4d; /* Warna biru gelap */
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Mengatur 2 gambar supaya sama besar dan simetri */
+.background-images {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.player-img {
+    flex: 1; /* Memberi ruang 50/50 yang sama besar */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6; /* Supaya teks lebih jelas */
+}
+
+.left {
+    background-image: url('gambar-pemain.jpg'); /* Gantikan dengan link gambar anda */
+}
+
+.right {
+    background-image: url('gambar-pemain.jpg'); /* Gambar yang sama */
+    transform: scaleX(-1); /* Membalikkan gambar untuk kesan mirror */
+}
+
+/* Gaya Borang di Tengah */
+.login-form {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    width: 300px;
+}
+
+h1 {
+    color: #ffd700; /* Warna kuning emas */
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.user-icon {
+    margin: 0 auto 30px;
+    width: 60px;
+}
+
+.user-icon .head {
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 50%;
+    margin: 0 auto 5px;
+}
+
+.user-icon .body {
+    width: 50px;
+    height: 25px;
+    background: #fff;
+    border-radius: 25px 25px 0 0;
+    margin: 0 auto;
+}
+
+/* Gaya 2 Kotak Input */
+.input-group {
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    background-color: #0047ab; /* Warna biru kotak */
+    color: white;
+    text-align: center;
+    outline: none;
+}
+
+input::placeholder {
+    color: #ccc;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Animasi Fade In */
+.fade-in-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in-element.show {
+    opacity: 1;
+    transform: translateY(0);
+}

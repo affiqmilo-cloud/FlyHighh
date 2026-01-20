@@ -1,0 +1,264 @@
+/* Tetapan Asas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+/* Kesan Hover Oren untuk semua tulisan */
+.hover-text {
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.hover-text:hover {
+    color: #FF8C00 !important; /* Warna oren apabila anak panah lalu */
+}
+
+/* HERO SECTION */
+.hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background stadium di belakang navigation bar */
+.stadium-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../image/stadium-crowd.jpg') center/cover no-repeat;
+    z-index: -1;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 1); /* DIUBAH: Latar belakang hitam pekat */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 6%;
+    position: relative;
+    z-index: 1000;
+}
+
+.logo-area {
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+}
+
+.wing-img { width: 100px; margin-left: 10px; filter: invert(1); }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.reg-btn {
+    border: 3px solid white;
+    padding: 8px 25px;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+
+.reg-btn:hover {
+    background: white;
+    color: black;
+    transform: scale(1.05);
+}
+
+/* Hero Content */
+.hero-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6%;
+}
+
+.hero-left { color: white; flex: 1; }
+
+.hero-left h1 {
+    font-family: 'Oswald', sans-serif;
+    /* DIUBAH: Saiz tulisan dibesarkan untuk nampak gah */
+    font-size: clamp(80px, 12vw, 150px); 
+    line-height: 0.9;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.hero-left .subtitle {
+    /* DIUBAH: Subtitle dibesarkan dan diberi jarak huruf eksklusif */
+    font-size: clamp(30px, 4vw, 55px);
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+
+.hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 100%;
+    overflow: visible; /* Memastikan gambar besar tidak terpotong */
+}
+
+.player-img {
+    /* DIUBAH: Gambar dipanjangkan dan dilebarkan sedikit */
+    height: 110%; 
+    width: auto;
+    transform: scale(1.1);
+    object-fit: contain;
+    filter: drop-shadow(0 10px 20px rgba(255, 140, 0, 0.3));
+    align-self: flex-end;
+}
+
+/* --- MOMENTS & RECAP SECTION --- */
+.white-space-container {
+    padding: 60px 6%;
+    background-color: #ffffff;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin: 40px 0 20px 0;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.grid-moments {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.grid-recap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.image-box {
+    display: block;
+    border: 3px solid #000000;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    text-decoration: none;
+    height: 250px;
+}
+
+.grid-recap .image-box {
+    height: 350px;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.image-box:hover {
+    border-color: #FF8C00;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+}
+
+.image-box:active {
+    transform: scale(0.95);
+    filter: brightness(0.8);
+}
+
+/* FOOTER */
+.main-footer {
+    background-color: #1a1a1a;
+    padding: 60px 0;
+    text-align: center;
+    color: white;
+}
+
+.footer-logo { 
+    font-size: 26px; 
+    font-weight: 900; 
+    margin-bottom: 25px; 
+    font-family: 'Oswald', sans-serif; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-wing { width: 100px; margin-left: 10px; filter: invert(1); }
+
+.social-links { display: flex; justify-content: center; gap: 20px; }
+.social-links img { 
+    width: 40px; 
+    border-radius: 8px; 
+    transition: transform 0.3s;
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+}
+
+/* Responsif */
+@media (max-width: 992px) {
+    .grid-moments {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .grid-recap {
+        grid-template-columns: 1fr;
+    }
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .hero-right {
+        display: none;
+    }
+}

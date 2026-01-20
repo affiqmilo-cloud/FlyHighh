@@ -1,0 +1,183 @@
+:root {
+    --primary-orange: #ff6600;
+    --dark-gray: #333;
+    --light-gray: #f4f4f4;
+    --border-color: #ccc;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ecef;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    border: 2px solid #000;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Header & Nav */
+header {
+    background: #b0b0b0;
+    padding: 20px;
+}
+
+.logo-section h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.logo-section span {
+    border: 2px solid black;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* BAHAGIAN NAVIGASI OREN */
+nav {
+    background-color: var(--primary-orange);
+    margin: 15px -20px -20px -20px; /* Menyelaraskan kedudukan ke tepi header */
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    margin: 0; /* Reset margin untuk nav baru */
+    font-weight: bold;
+}
+
+nav ul li a {
+    color: white; /* Teks warna putih supaya nampak jelas atas oren */
+    text-decoration: none;
+}
+
+/* Main Section */
+.hero-section {
+    padding: 20px;
+}
+
+.main-title {
+    text-align: left;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+}
+
+.profile-card {
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+/* Stats & Style */
+.stats-row {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.rank-number {
+    font-size: 60px;
+    font-weight: bold;
+    display: block;
+}
+
+/* Player Grid (The Big Three) */
+.player-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.player-box {
+    flex: 1;
+    text-align: center;
+}
+
+.image-placeholder {
+    width: 100%;
+    aspect-ratio: 3/4; /* Pastikan kotak sama saiz */
+    background: #ddd;
+    border: 2px solid #333;
+    overflow: hidden;
+}
+
+.image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Gambar akan penuhkan kotak tanpa penyet */
+}
+
+/* Tulisan Bawah (Nama Player) */
+.name-tag {
+    margin-top: 10px;
+    padding: 8px;
+    border: 2px solid #333; /* Kotak keliling tulisan */
+    color: var(--primary-orange); /* Tulisan warna oren */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Coach Section */
+.coach-content {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.coach-image img {
+    width: 120px;
+    height: 150px;
+    object-fit: cover;
+    border: 2px solid #333;
+}
+
+/* Others Players Table (Kelabu Putih) */
+.player-list {
+    margin-top: 15px;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+}
+
+.gray { background-color: #d3d3d3; }
+.white { background-color: #ffffff; }
+
+.section-subtitle {
+    margin-top: 30px;
+    border-bottom: 1px solid #000;
+}
+
+
+/* FOOTER */
+.main-footer {
+    background-color: #1a1a1a;
+    padding: 60px 0;
+    text-align: center;
+    color: white;
+}
+
+.footer-logo { font-size: 26px; font-weight: 900; margin-bottom: 25px; font-family: 'Oswald', sans-serif; }
+.footer-wing { width: 100px; margin-left: 1px; filter: invert(1); vertical-align: middle; }
+
+.social-links { display: flex; justify-content: center; gap: 20px; }
+.social-links img { width: 40px; border-radius: 8px; }
+		
